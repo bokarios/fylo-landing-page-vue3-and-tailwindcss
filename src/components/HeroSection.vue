@@ -1,7 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const toNextSection = () => {
+  const hero = document.querySelector('#hero')
+  scrollTo(0, hero!.clientHeight + 84)
+}
+</script>
 
 <template>
-  <div class="hero h-screen w-full relative">
+  <div id="hero" class="hero h-screen w-full relative">
     <div
       class="logo-shape absolute top-0 left-0 w-full h-full bg-[#004aad99] z-10 flex justify-center items-center"
     >
@@ -12,9 +17,9 @@
         </p>
         <button
           type="button"
-          class="h-10 px-6 pt-1 uppercase text-white text-2xl bg-brand-purple hover:saturate-150 hover:scale-x-[1.07] hover:scale-y-[1.05] transition-all duration-500 ease"
+          class="h-10 px-6 pt-1 uppercase text-white text-lg bg-brand-purple hover:saturate-150 hover:scale-x-[1.07] hover:scale-y-[1.05] transition-all duration-500 ease"
         >
-          find your ego
+          find yours
         </button>
       </div>
     </div>
@@ -26,11 +31,13 @@
     <div
       class="next absolute bottom-10 left-1/2 w-12 h-28 border-4 border-brand-black rounded-t-full rounded-b-full"
     >
-      <img
-        src="/img/soccer_ball.webp"
-        class="w-full aspect-square animate-spin"
-        alt="ball"
-      />
+      <button @click="toNextSection">
+        <img
+          src="/img/soccer_ball.webp"
+          class="w-full aspect-square animate-spin"
+          alt="ball"
+        />
+      </button>
     </div>
   </div>
 </template>
