@@ -4,9 +4,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'brand-black': '#040308',
-        'brand-purple': '#5346af',
-        'brand-blue': '#004aad',
+        'brand-white': 'hsl(0, 0%, 100%)',
+        'brand-intro': 'hsl(217, 28%, 15%)',
       },
     },
   },

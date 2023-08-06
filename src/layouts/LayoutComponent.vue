@@ -1,10 +1,8 @@
 <script setup lang="ts">
-import NavigationBar from '@/components/NavigationBar.vue'
+import HeaderComponent from '@/components/HeaderComponent.vue'
 </script>
 
 <template>
-  <div>
-    <NavigationBar />
-    <slot />
-  </div>
+  <HeaderComponent />
+  <slot />
 </template>

@@ -12,3 +12,10 @@ app.use(createPinia())
 app.use(router)
 
 app.mount('#app')
+
+const defaultTitle: string = 'Fylo'
+
+router.beforeEach((data) => {
+  document.title = ((data.meta.title && `${data.meta.title}-${defaultTitle}`) ||
+    defaultTitle) as string
+})
